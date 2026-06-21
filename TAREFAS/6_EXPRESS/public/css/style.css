@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #007bff30;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +30,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
+    background-color: #007bff13;
 }
 button {
     width: 100%;
