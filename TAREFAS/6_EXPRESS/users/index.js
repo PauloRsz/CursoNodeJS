@@ -17,8 +17,9 @@ router.post('/save', (req,res) => {
 
     name = req.body.name
     user = req.body.user
+    age = req.body.age
 
-    salvarUsuario(name,user)
+    salvarUsuario(name,user, age)
 
     console.log(`O nome do usuário é ${name} e seu nick é ${user}.`)
 
@@ -52,7 +53,7 @@ router.get('/:id', (req, res) => {
 })
 
 // função para salvar usuário em um arquivo json
-function salvarUsuario(name, user) {
+function salvarUsuario(name, user, age) {
     //ler o banco
     const dados = fs.readFileSync('data/db.json', 'utf8')
 
@@ -63,7 +64,8 @@ function salvarUsuario(name, user) {
     const novoUsuario = {
         id: banco.users.length + 1,
         name: name,
-        user: user
+        user: user,
+        age: age
     }
 
     //inserir no array

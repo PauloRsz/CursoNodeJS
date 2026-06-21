@@ -9,6 +9,24 @@
       "id": 2,
       "name": "ana",
       "user": "anacairez"
+    },
+    {
+      "id": 3,
+      "name": "sirval",
+      "user": "sirvalcaires",
+      "age": "52"
+    },
+    {
+      "id": 4,
+      "name": "ana julia machado caires ",
+      "user": "analinda",
+      "age": "18"
+    },
+    {
+      "id": 5,
+      "name": "ana julia machado caires ",
+      "user": "analinda",
+      "age": "18"
     }
   ]
 }

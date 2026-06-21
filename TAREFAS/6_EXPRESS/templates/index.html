@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Gerenciador de Usuários</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Você está na home!</h1>
-    <a href="/users/add"><button>Fazer Cadastro</button></a>
-    <a href="/users/1"><button>Abrir usuário</button></a>
+    <div class="container">
+        <h2>Bem-vindo</h2>
+        <p class="subtitle">Sistema de Gerenciamento de Usuários</p>
+        
+        <div class="button-group">
+            <a href="/users/add">
+                <button type="button" class="btn-primary">Novo Cadastro</button>
+            </a>
+            <a href="/users/1">
+                <button type="button" class="btn-secondary">Visualizar Usuário</button>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
