@@ -1,0 +1,13 @@
+<h1>Olá Handlebars!</h1>
+<p>Nome do usuário é {{user.name}} {{user.surname}} e sua idade é {{user.age}} anos!</p>
+<p>{{palavra}}</p>
+{{#if approved}}
+<p>Parabéns seu cadastro foi aprovado!</p>
+{{else}}
+<p>O seu cadastro necessita de aprovação para o acesso total!</p>
+{{/if}}
+{{#if auth}}
+<p>
+    você está autenticado, <a href="/dashboard.handlebars">clique aqui</a> para ser redirecionado para a pagina de membros!
+</p>
+{{/if}}
