@@ -9,7 +9,8 @@ body {
 }
 /* NAVBAR */
 nav {
-  background: white;
+  background: #111;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +20,7 @@ nav {
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #e60033;
+  color: #d50000;
 }
 .menu {
   display: flex;
@@ -31,19 +32,21 @@ nav {
   transition: 0.3s;
 }
 .menu li:hover {
-  color: #e60033;
+  color: #d50000;
 }
 /* HERO */
 .hero {
+  background-image: url(/images/garagem.jpg);
   text-align: center;
   padding: 70px 20px;
 }
 .hero h1 {
+  color: gainsboro;
   font-size: 42px;
   margin-bottom: 20px;
 }
 .hero p {
-  color: #666;
+  color: white;
   margin-bottom: 30px;
 }
 .search-box {
@@ -59,7 +62,7 @@ nav {
 }
 .search-box button {
   padding: 14px 25px;
-  background: #e60033;
+  background: #d50000;
   color: white;
   border: none;
   border-radius: 8px;
@@ -96,7 +99,7 @@ nav {
   margin-bottom: 10px;
 }
 .price {
-  color: #e60033;
+  color: #d50000;
   font-size: 22px;
   font-weight: bold;
 }
