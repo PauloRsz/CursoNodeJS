@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+header {
+    background: white;
+    padding: 20px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h2 {
+    color: #d50032;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.imagem-veiculo img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dados {
+    background: white;
+    flex: 2;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.dados h1 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.dados p {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.preco-box {
+    background: white;
+    flex: 1;
+    padding: 30px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.preco-box h2 {
+    color: #d50032;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #d50032;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    margin-top: 50px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

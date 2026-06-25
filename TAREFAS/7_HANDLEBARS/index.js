@@ -1,7 +1,10 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
+const path = require('path')
 
 const app = express()
+
+const basePath = path.join(__dirname, 'views')
 
 const hbs = exphbs.create({
     partialsDir: ['views/partials'],
@@ -10,6 +13,7 @@ const hbs = exphbs.create({
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 app.use(express.static('public'))
+
 
 app.get('/dashboard.handlebars', (req, res) => {
 
@@ -52,6 +56,12 @@ app.get('/blog', (req, res) => {
     res.render('blog', {post})
 })
 
+app.get('/veiculo', (req, res) => {
+    res.render('veiculo', {
+        css: '<link rel="stylesheet" href="css/veiculo.css">'
+    
+    })
+})
 
 app.get('/', (req, res) => {
     const user = {
