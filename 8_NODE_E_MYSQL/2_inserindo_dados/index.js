@@ -1,14 +1,16 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const mysql = require('mysql2')
+const mysql = require('mysql')
 
 const app = express()
 
-const hbs = exphbs.create({
-    partialsDir: ['views/partials'],
-})
+app.use(
+    express.urlencoded({
+        extended: true
+    })
+)
 
-app.engine('handlebars', hbs.engine)
+app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
 app.use(express.static('public'))
@@ -17,31 +19,40 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.post('/books/insertbook', (req, res) => {
+
+    const title = req.body.title
+    const pageqty = req.body.pageqty
+
+    const sql = `INSERT INTO books (title, pageqty) VALUES ('${title}', '${pageqty}')`
+    console.log(pageqty)
+
+    conn.query(sql, function(err) {
+        if (err) {
+            console.log(err)
+        }
+
+        res.redirect('/')
+    })
+    
+})
+
 const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '172839',
+    password: '',
     database: 'nodemysql'
 })
 
 conn.connect(function(err) {
-    if (err) {
-        console.error('Erro ao conectar ao MySQL:', err)
-        return
+
+    if(err) {
+        console.log(err)
+    }else{
+        console.log('Conectou ao MySQL')
     }
 
-    console.log('Conectou ao MySQL')
+    
 
-    const server = app.listen(3000, () => {
-        console.log('App rodando na porta 3000')
-    })
-
-    server.on('error', (e) => {
-        if (e.code === 'EADDRINUSE') {
-            console.error('Erro: porta 3000 já está em uso')
-            process.exit(1)
-        } else {
-            throw e
-        }
-    })
+    app.listen(3000)
 })
